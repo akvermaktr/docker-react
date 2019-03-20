@@ -5,4 +5,15 @@ services:
 before_install:
   - docker build  -f Dockerfile.dev -t akvermaktr/docker-react .
 script: 
-  - docker run akvermaktr/docker-react  npm run test -- --coverage 
+  - docker run akvermaktr/docker-react  npm run test -- --coverage
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-807112384386"
+  bucket_path: "docker-react"
+  on: 
+    branch: master
+
+
