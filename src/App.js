@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-          Update App.js 
+     Another update d form github direct ocmmit to master branch . 
           </p>
           <a
             className="App-link"
